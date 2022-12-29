@@ -42,7 +42,7 @@
                             <tr>
                                 <td id="img"><img src= {{ info['thumb'] }} alt="Cover-Art"></td>
                                 <td class="center"> <a href=  {{ "/player?" + info['req'] }}> {{ info['title'] }} </a> </td>
-                                <td><a href= {{ info['chlink'] }}> {{ info['author'] }} </a></td>
+                                <td class="cha" ><a href= {{ info['chlink'] }}> {{ info['author'] }} </a></td>
                             </tr>
                             {% endfor %}
                         </tbody>
