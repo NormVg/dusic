@@ -132,7 +132,7 @@ tbody {
     overflow-y: auto;
       
 
-    overflow-x: auto; 
+    overflow-x: hidden; 
 }
 
 ::-webkit-scrollbar {
