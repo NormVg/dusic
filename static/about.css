@@ -1,0 +1,31 @@
+body{
+    display: flex;
+    justify-content: center;
+    background: #282a36;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 2px 4px black;
+    user-select: none
+  }
+
+img {
+    
+    /* user-drag: none; */
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#box{
+    border: black solid;
+  background:#bd93f9;
+  margin: 8px;
+  padding: 0;
+  color: white;
+  width: 340px;
+  height: 95vh;
+  transition: all 0.3s ease-in;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 4);
+}
