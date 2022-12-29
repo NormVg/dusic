@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='main.png') }}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='player.css') }}">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <!--  -->
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <title>Dusic - Player</title>
+</head>
+
+<body>
+
+    <div id="main">
+        <div id="coverart">
+            <img src= {{ thumb }} alt="">
+        </div>
+
+        <div id="control">
+            <h3>
+                {{ name }}
+            </h3>        
+        </div>
+
+        <div id="control">
+            <h4>
+              By - {{ artist }}
+            </h4>
+        </div>
+
+        <div id="player">        
+            <audio preload="auto" id="audio" loop controls >
+                <source src= "{{ url_for('static',filename= audio) }}" >
+            </audio>
+        </div>
+        
+
+        
+
+
+    </div>
+
+    <script src="{{ url_for('static', filename='player.js') }}"></script>
+
+</body>
+
+</html>

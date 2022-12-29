@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='main.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='search.css') }}">
+
+    <title>Dusic - Search</title>
+</head>
+
+<body>
+
+    <div id="box">
+
+        <div id="in">
+
+            <div id="head">
+                <h1>Select The Song...</h1>
+            </div>
+            <div id="con">
+
+
+
+                <div id="table">
+                    <table class="scrolldown">
+
+                        <!-- Table head content -->
+                        <thead>
+                            <tr>
+                                <th>Cover Art</th>
+                                <th class="center">Song</th>
+                                <th>Artist</th>
+                            </tr>
+                        </thead>
+
+                        <!-- Table body content -->
+                        <tbody>
+                            {% for info in data %}
+                            <tr>
+                                <td id="img"><img src= {{ info['thumb'] }} alt="Cover-Art"></td>
+                                <td class="center"> <a href=  {{ "/player?" + info['req'] }}> {{ info['title'] }} </a> </td>
+                                <td><a href= {{ info['chlink'] }}> {{ info['author'] }} </a></td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

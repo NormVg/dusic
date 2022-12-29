@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='main.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Dusic</title>
+</head>
+<body>
+<div id="box">
+    <div id="in">
+        <div id="logo-box">
+           
+        <img id="logo" src="{{ url_for('static', filename='main.png') }}">
+        <h1 id="logo-txt" >Dusic</h1>
+    </div>
+    <br>
+    <div id="search">
+    <form action="{{ url_for("index")}}" method="post">
+        <label  for="lname"><h1 id="songss" >Search Songs...</h1> </label><br>
+        <input type="text" id="lname" name="lname" placeholder="   Most relevent song name..."><br>
+        <button type="submit">Search...</button>
+      </form>
+    </div>
+</div>
+</div>
+</body>
+</html>
