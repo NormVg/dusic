@@ -2,9 +2,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #ff564c;
+    background: #282a36;
     font-family: 'Open Sans', sans-serif;
-    user-select: none
+    user-select: none;
+    position: relative;
+    height: 97vh;
+    
 }
 
 img {
@@ -31,6 +34,13 @@ img {
     transition: all 0.3s ease-in;
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 4);
+    /* addon */
+    max-height: 800px;
+    position: absolute;
+    top: 48%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
 }
 
 #in {
@@ -105,4 +115,68 @@ button {
     height: 30px;
     background: #ff564c;
     box-shadow: 0px 0px 3px rgba(214, 210, 210, 0.747);
+    border: 1px solid black;
+}
+
+#about{
+    position: absolute;
+    bottom: 0%;
+    left: 2%;
+    
+}
+
+#about img{
+    width: 30px;
+    background-color: black;
+    border:#ff564c 1px dashed;
+    border-radius: 100%;
+    padding: 2px;
+    box-shadow: 0px 0px 15px black;
+}
+
+#about img:hover{
+    box-shadow: 0px 0px 10px rgb(128, 122, 122);
+    background: rgb(39, 34, 34);
+    color: #ac2720;
+}
+
+
+#foot{
+    font-size: 12px;
+    position: fixed;
+    bottom: 0;
+    right: 3%;
+    
+}
+  
+#foot a{
+    text-decoration: none;
+    color: #50fa7b;
+  }
+
+#foot a:hover{
+    color: black;
+}
+  
+
+#download{
+    position: absolute;
+    bottom: 0%;
+    right: 2%;
+    
+}
+
+#download img{
+    width: 30px;
+    background-color: black;
+    border:#ff564c 1px solid;
+    border-radius: 100%;
+    padding: 4px;
+    box-shadow: 0px 0px 15px black;
+}
+
+#download img:hover{
+    box-shadow: 0px 0px 10px rgb(128, 122, 122);
+    background: rgb(39, 34, 34);
+    color: #ac2720;
 }

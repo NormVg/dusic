@@ -1,5 +1,5 @@
 from flask import Flask, render_template, url_for, redirect, request, send_file
-
+from replit import web
 import sertube
 import tubedown
 import fileaval
@@ -40,15 +40,22 @@ def player():
 
   id = request.args.get('s')
   artist = request.args.get('a')
-  try:
-    data = tubedown.tubedata(id)
-  except:
-    data = tubedown.tubedata(id)
+  
+  # data = None
+  # while data != None:
+  #   print("kk", data)
+  #   try:
+  #     data = tubedown.tubedata(id)
+  #   except: 
+  #     data = None
+  #   print("gg", data)
+  
   yn = fileaval.file_avalable(id)
   print(yn)
   if False == yn:
     tubedown.youtubedownload(id)
-
+  data = tubedown.tubedata(id)
+  print(data,artist,id)
   name = data["title"]
   thumb = data['thumb']
   chrurl = data['chrurl']
@@ -133,5 +140,5 @@ def cls():
 
 
 if __name__ == '__main__':
-  app.run(debug=True)
-  # web.run(app)
+  #app.run(debug=True)
+  web.run(app)

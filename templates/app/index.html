@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script type="text/javascript" src="/eel.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,19 +22,17 @@
     </div>
     <br>
     <div id="search">
-    <form action="{{ url_for("index")}}" method="post">
+    <form action="{{ url_for("index_app")}}" method="post">
         <label  for="lname"><h1 id="songss" >Search Songs...</h1> </label><br>
         <input type="text" id="lname" name="lname" placeholder="   Most relevent song name..."><br>
         <button type="submit">Search...</button>
       </form>
       
     </div>
-    <a id="about" style="text-decoration: none;" href="/about">
+    <a id="about" style="text-decoration: none;" href="/about-app">
     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEeElEQVR4nO2Zb4hVVRDAb4Kh2T9IS4MI0j5YgYogUsQGubndmfvWtzJzV3ZhIVKTisAQ+hIvDayoD+GfD2EU5YegEPuyRVSmm4JCmbhmFiFGf0hbQjY3K903cf685zPfPefuvW+XDe7A+bJvzpn5nZk7Z87ZICikkEIKySqyZvFUISgLwQ5h/EIYhoThb4k75gb/B5EguEoYHxWCn4VRrhgE26WvbVowmUX62qYJ4a6mAJePqhAcFopWBZMyEgS7U0D8Z8DGYDKJMPSMHUKn2qhQ1D6xzlYqUyTGB4XhdWH8Shh/kt72GfrvhMczgZio7NXrE11rC8MPwjAiHC1tPQTDPcJ46PLdxI+NA7AkO4T9ZuLO26ydEw3rDwjjWqFwdmsglKOE55rs5Db7+5qcIGpEZi18t8lvZ4VxZT6Izs4bheF0Qn4/a0Gezw8SPmlBtiSk358Sh/OzgzBsdOT2C9b4hpaBML7q0HstOwjhoKPivGF0wt7cIBSxtfeWQ+/H7G0Gw8Vk43hc65XLNzv1vBAwKl3h7RbkiEO3KkTTs7YbVQfI70rHOADHsoPgwbo9alZUGkZv+4xsUWE85XDgHQMRtedPLVhiN+STZD0YygRhQGCbY+Fa+X0iN0gcdtmNe89h783sIIQHHbu428Iuyw3SBXfYTTnsyIDP8kRk2LFDp4Xoaj0YvsnxjZgOoTu6RRgvOHR/yRORfZ7cXl2vXARfjh0EPlWHrrW12QPcnyMi0VJVvx2ODEsc3pv5hCd8XM+N8WEh/Mehe0ooXJgZxMDgJk9UPtJ63aVFY4zGxXqz6IsmwXO5IAwILPA4dUGllnEI94whGrv0nC64MwX0gtwg1sF+j7FNWi8O55uHBi/ImdpDRHKjiLVovN8SCGMsnO3ZsRGh0l1al+HlFNF4xa67UL+uuHTLy+e0DkTdBP3OrTcguDWF7hYL/bRfN2zNxUobLC+f4zcI67Suecvy6e6wuuu8ut2lRa2BIJouDG97DFZVCdX6jDtTfCM762XX1Ziyjt6e2lmT450KHhGGkx5D30ocdTZAu/XNN3Wy9lCnXyQZv/NE8FcheEpWrLgpPYBuFdTNMOGKaxYeFYIP9I5WKlMu3UvwwxTRqG1Av1DHLD1XvcQwhHpNtXbyvL/0vT7GhzwphBVh+MOx0FlVcYSiefV5iNfoXCf4LTXEpXFGCB9rvDAJRfO0DfPo4Jp7SDi678ooODtd3T5slVU4sz4n7pgrjC+mPDd8qTYkhC81PnIrW9qms3VRN1PoaSit8LUDYrB2RpgdwzadQu4UyDqqZm1sq9tbGd3t8e+86g6UY884lAbUC2C9lfB1wy0dsLeWwlIqXScE+5P9hO2Bff5sBvG99HRcbytLn/c+PR6D8JyybXxYdkNyRYQTQaKDMdzf8NzjrvXjO6rKB/NdwgMJICOqTfi8yU7sM0WgdKunik1Umg0rX+w3OtDE3wPuM8V3a5vYNNvsOQIdIIxHJxHIYHaQdP9KmyAQ2J8ZpJBCCimkkGCc5F9DAUfuWS5pygAAAABJRU5ErkJggg==">
 </a>
-<a id="download" style="text-decoration: none;" href="https://drive.google.com/drive/folders/1SsYbkrTg0f4qX96XsWrDsOCE6Pow8kVX">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAxUlEQVR4nO2VQQrCMBBFcwnFI5XObLqYHLhFxOJKF+5zkS8JoViraZSkSs2DISGBeSEzIUoVIoHwHpo6tTTQ1EG4XVz8f6DUePVA8xFCh2+IYaOIs4PVXzWEW2g+oWm2j2K75vZydDmEeicTvniRE7u5XXN71Cd/mxgJ/Hg/9wd6npe64N89VzdItYHm8yAdgq6QevdpXhXTMFN5WJpMPJbPS5OKh5q/qGlW8Tv8sFjITDs2UQiZgLiussiFjM2d+iYLKoYb+d1ksTuE1TAAAAAASUVORK5CYII=">
-</a>
+
 </div>
 </div>
 <span style="color: black;" id="foot" >
